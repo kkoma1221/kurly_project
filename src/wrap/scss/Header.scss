@@ -1,0 +1,416 @@
+#header {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.08); // 좌우 상하(양수 아래, 음수 위에) 번짐효과 길이
+    position: relative;
+    z-index: 3;
+    .row {
+        width: 100%;
+        .container {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            .content {
+                width: 100%;
+            }
+        }
+        &.row1 {
+            height: 36px;
+            position: relative;
+            z-index: 3;
+            .container {
+                height: 100%;
+                .content {
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    #aside {
+                        font-size: 12px;
+                        color: #333;
+                        position: relative;
+                        a {
+                            color: #333;
+                            img {
+                                width: 8px;
+                                margin-left: 3px;
+                            }
+                            &.on {
+                                color: #5f0080;
+                            }
+                            &:hover {
+                                color: #5f0080;
+                            }
+                        }
+                        .signin-box {
+                            position: relative;
+                            display: inline-flex;
+                            padding: 0 0 25px 0;
+                            margin: 25px 0 0 0;
+                            .signIn {
+                                span {
+                                    font-size: 12px;
+                                    color: #333;
+                                    &:first-child {
+                                        display: inline-flex;
+                                        height: 16px;
+                                        margin: 0 6px 0 0;
+                                        padding: 0 4px;
+                                        border: 1px solid #5f0080;
+                                        border-radius: 10px;
+                                        // border-radius: LT RT RB LB; //  leftTop RightTop RightBottom LeftTop 시계방향
+                                        // border-radius: 0 8px 0 8px;
+                                        color: #5f0080;
+                                        font-size: 10px;
+                                        width: 44px;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+                                i {
+                                    display: inline-flex;
+                                    margin: 2px;
+                                    &.new {
+                                        background: url(../../../public/images/sub/icon_new.svg) no-repeat 50% 50%;
+                                        width: 12px;
+                                        height: 12px;
+                                    }
+                                    &.arrow {
+                                        background: url(../../../public/images/sub/ico_down_16x10.webp) no-repeat 50% 50%;
+                                        width: 8px;
+                                        height: 5px;
+                                        background-size: cover;
+                                    }
+                                }
+                            }
+                            .sign-tooltip {
+                                position: absolute;
+                                top: 25px;
+                                left: 0;
+                                width: 130px;
+                                background: #fff;
+                                border: 1px solid #ccc;
+                                ul {
+                                    width: 100%;
+                                    padding: 5px 10px;
+                                    li {
+                                        width: 100%;
+                                        line-height: 180%;
+                                        a {
+                                            display: block;
+                                            color: #333;
+                                            font-size: 12px;
+                                            transition: color 0.3s ease-in-out;
+                                            &:hover {
+                                                color: #5f0080;
+                                            }
+                                            i {
+                                                display: inline-flex;
+                                                margin: 3px;
+                                                background: url(../../../public/images/sub/icon_new.svg) no-repeat 50% 50%;
+                                                width: 12px;
+                                                height: 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        i {
+                            color: #ccc;
+                            margin: 0 7px;
+                            font-size: 11px;
+                        }
+                        .customer-center {
+                            position: absolute;
+                            width: 130px;
+                            right: 0;
+                            top: 22px;
+                            background: #fff;
+                            border: 1px solid #ccc;
+                            ul {
+                                padding: 5px 15px;
+                                li {
+                                    width: 100%;
+                                    a {
+                                        font-size: 12px;
+                                        color: #333;
+                                        line-height: 180%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.row2 {
+            height: 64px;
+            position: relative;
+            z-index: 2;
+            .container {
+                height: 100%;
+                .content {
+                    height: 100%;
+                    display: flex;
+                    .left {
+                        width: 325px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        a {
+                            font-size: 18px;
+                            color: #b5b5b5;
+                            font-weight: 500;
+                            img {
+                                width: auto;
+                                cursor: default;
+                            }
+                            span {
+                                margin-left: 10px;
+                                color: #5f0080;
+                                margin: 0 0 0 20px;
+
+                            }
+                            &:nth-of-type(2) {
+                                img {
+                                    vertical-align: top;
+                                    transform: translate(3px, 10px);
+                                }
+                            }
+                        }
+                        i {
+                            margin: 0 10px;
+                            color: #e2e2e2;
+                        }
+                    }
+                    .center {
+                        width: 400px;
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        input {
+                            position: relative;
+                            z-index: 1;
+                            width: 100%;
+                            height: 48px;
+                            border: 1px solid #5f0080;
+                            color: #333;
+                            font-size: 16px;
+                            border-radius: 5px;
+                            outline-offset: -1px;
+                            padding: 0 15px;
+                            outline: 0;
+                        }
+                        button {
+                            position: absolute;
+                            z-index: 2;
+                            top: 15px;
+                            right: 10px;
+                            width: 30px;
+                            height: 30px;
+                            background : none;
+                            border: 0;
+                            img {
+                                width: auto;
+                            }
+                        }
+                    }
+                    .right {
+                        width: 325px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        position: relative;
+                        > span {
+                            > a {
+                                margin: 0 0 0 23px;
+                                > img {
+                                    width: auto;
+                                }
+                            }
+                        }
+                        .map-address {
+                            position: absolute;
+                            top: 65px;
+                            right: 3px;
+                            width: 267px;
+                            border: 1px solid #ccc;
+                            background: #fff;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: -11px;
+                                left: 50%;
+                                margin-left: -9px;
+                                width: 18px;
+                                height: 11px;
+                                background:url(../../../public/images/intro/icon_triangle.svg) no-repeat 50% 50%;
+                            }
+                            ul {
+                                padding: 10px 20px;
+                                li {
+                                    width: 100%;
+                                    padding: 7px 0;
+                                    font-size: 16px;
+                                    color: #777;
+                                    &:last-child {
+                                        display: flex;
+                                        justify-content: space-between;
+                                    }
+                                    strong {
+                                        color: #5f0080;
+                                        vertical-align: top;
+                                    }
+                                    a {
+                                        display: flex;
+                                        width: 35%;
+                                        height: 35px;
+                                        border: 1px solid #5f0080;
+                                        background: #fff;
+                                        color: #5f0080;
+                                        font-size: 12px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 3px;
+                                    }
+                                    button {
+                                        width: calc(65% - 5px);
+                                        height: 35px;
+                                        margin: 0 0 0 5px;
+                                        background: #5f0080;
+                                        color: #fff;
+                                        border: 1px solid #5f0080;
+                                        border-radius: 3px;
+                                        font-size: 12px;
+                                        cursor: pointer;
+                                        img {
+                                            width: 24px;
+                                        }
+                                        &.address-update {
+                                            width: 100%;
+                                            margin: 0;
+                                            background: #fff;
+                                            color: #5f0080;
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    h4 {
+                                        font-size: 16px;
+                                        color: #333;
+                                        line-height: 150%;
+                                    }
+                                    h5 {
+                                        font-size: 14px;
+                                        color: #5f0080;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.row3 {
+            height: 56px;
+            position: relative;
+            z-index: 1;
+            &.fixed {
+                z-index: 3;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 3px 7px rgba(0,0,0,0.08);
+            }
+            .container {
+                height: 100%;
+                .content {
+                    height: 100%;
+                    display: flex;
+                    .left {
+                        width: 225px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        a {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #222;
+                            &:hover {
+                                color: #5f0080;
+                            }
+                            &.on {
+                                color: #5f0080;
+                            }
+                            img {
+                                width: auto;
+
+                            }
+                            span {
+                                margin: 0 0 0 10px;
+                            }
+                        }
+                    }
+                    .center {
+                        width: 600px;
+                        height: 100%;
+                        nav {
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            align-items: center;
+                            justify-content: space-around;
+                            a {
+                                display: flex;
+                                font-size: 16px;
+                                font-weight: 500;
+                                background: #fff;
+                                color: #222;
+                                align-items: center;
+                                padding-bottom: 3px;
+                                border-bottom: 1px solid transparent;
+                                transition: all 0.3s;
+                                &:hover {
+                                    color: #5f0080;
+                                    border-bottom-color: #5f0080;
+                                }
+                                &.on {
+                                    color: #5f0080;
+                                }
+                            }
+                        }
+                    }
+                    .right {
+                        width: 225px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        a {
+                            display: inline-flex;
+                            padding: 6px 16px;
+                            border: 1px solid rgb(238, 238, 238);
+                            font-size: 13px;
+                            border-radius: 12.5px;
+                            background: #fff;
+                            font-weight: 500;
+                            em {
+                                color: #5f0080;
+
+                            }
+                            span {
+                                color: rgb(102, 102, 102);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,198 @@
+ #postCode{
+    z-index: 6; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 530px;
+        height: 600px;
+        background: #fff;
+        border: 1px solid #999;
+        overflow: hidden;
+        .window-title {
+            width: 100%;
+            height: 31px;
+            background: rgb(132, 173, 234);
+            border-bottom: 1px solid #b2b2b2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 0 0 5px;
+                img {
+                    width: 16px;
+                    height: 17px;
+                    border-radius: 3px;
+                }
+                em {
+                    font-size: 14px;
+                    color: #333;
+                    margin: 0 0 0 7px;
+                    transform: translateY(-1px);
+                }
+            }
+            button{
+                width: 46px;
+                height: 100%;
+                background: transparent;
+                border: 0;
+                color: #333;
+                &:hover{
+                    background: rgb(232, 27, 35);
+                    color: #fff;
+                }
+                i {
+                    font-size: 17px;
+                }
+            }
+        }
+        .content {
+            position: relative; // 여기 안에만 있어라
+            width: 100%;
+            height: 569px; // calc(100% - 31px);
+            overflow-y: auto;
+            padding: 40px 30px 30px 30px;
+            // 카카오 주소검색 API 부모박스
+            .binding-box {
+                z-index: 1;
+                width: 100%;
+                .title {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 0 30px 0;
+                    h1 {
+                        width: 100%;
+                        font-size: 24px;
+                        font-weight: 500;
+                        strong {
+                            color: #5f0080;
+                            font-weight: 500;
+                        }
+                        span {
+                            color: #333;
+                        }
+                    }
+                    h2 {
+                        width: 100%;
+                        padding: 13px 0 0 0;
+                        font-size: 16px;
+                        color: #666;
+                    }
+                }
+                .list-box {
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        .gap {
+                            width: 100%;
+                            padding: 10px 0;
+                            input[type='text'] {
+                                width: 100%;
+                                height: 44px;
+                                padding: 0 15px;
+                                font-size: 14px;
+                                color: #333;
+                                border: 1px solid #ddd;
+                                border-radius: 3px;
+                                outline-offset: -1px;
+                                outline: 1px solid rgba(0,0,0,0);
+                                transition: all 0.3s ease-in-out;
+                                &:focus {
+                                    outline-color: rgba(0,0,0,0.7);
+                                }
+                            }
+                            &.row1 {
+                                padding: 0 130px 0 0;
+                                position: relative;
+                                button {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    width: 120px;
+                                    height: 44px;
+                                    border: 1px solid #5f0080;
+                                    border-radius: 3px;
+                                    background: #fff;
+                                    cursor: pointer;
+                                    img {
+                                        width: 24px;
+                                        height: 24px;
+                                    }
+                                    span {
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: #5f0080;
+                                    }
+                                }
+                            }
+                            &.row3 {
+                                p {
+                                    font-size: 12px;
+                                    color: #999;
+                                    line-height: 120%;
+                                }
+                            }
+                            &.row4 {
+                                padding: 0 0 25px 0;
+                                button {
+                                    width: 100%;
+                                    height: 44px;
+                                    color: #fff;
+                                    background: #5f0080;
+                                    border: 1px solid #5f0080;
+                                    border-radius: 3px;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.row5 {
+                                img {
+                                    width: 14px;
+                                    height: 14px;
+                                    margin: 0 7px 0 0;
+                                }
+                                span {
+                                    font-size: 14px;
+                                    color: #f03f40;
+                                }
+                            }
+                            &.row6 {
+                                padding: 0 0 0 21px;
+                                display: flex;
+                                justify-content: space-between;
+                                span {
+                                    font-size: 14px;
+                                    color: #666;
+                                }
+                                button {
+                                    background: none;
+                                    border: 0;
+                                    cursor: pointer;
+                                    em {
+                                        font-size: 12px;
+                                        color: #999;
+                                        font-weight: 500;
+                                    }
+                                    img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

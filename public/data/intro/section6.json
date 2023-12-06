@@ -1,0 +1,20 @@
+{   
+    "title" : "찬바람이 불어올 땐 #키엘 수분 크림",
+    "subTitle": "",
+    "titleOption": false,
+    "animation": false,
+    "imageBanner": true,
+    "cols": 1,
+   
+    "timeSale": {
+        "timeSale": false,
+        "timeSaleDate": "2023-10-19 11:15:00",
+        "timeSaleHours": 48,
+        "caption1": "샛별로 받는 추석선물 일일특가",
+        "caption2": "좋은 가격에 준비하세요!",
+        "caption3": "망설이면 늦어요!"
+    },
+    "product" : [
+        {"번호":"INTRO_S06_001", "이미지":"1cfe14fa-7839-46fd-bcdf-ce0cd0fb0e9d.jpg", "제품명":"", "정가":0, "할인율":0}
+    ]
+}

@@ -1,0 +1,389 @@
+.sub {
+    width: 100%;
+    user-select: none;
+    #section1 {
+        width: 100%;
+        .container {
+            width: 100%;
+            max-width: 1068px;
+            margin: 0 auto;
+            .title {
+                width: 100%;
+                max-width: 1050px;
+                margin: 0 auto;
+                .title-image {
+                    width: 100%;
+                    a {
+                        display: block;
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .title-text {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #333;
+                    text-align: center;
+                    padding: 60px 0;
+                }
+            }
+            .content {
+                width: 100%;
+                margin-left: 9px;
+                display: flex;
+                background: #fff;
+                .left {
+                    width: 267px;
+                    height: 100vh; // 높이를 잡아줘야 고정됨
+                    // 스크롤시 상단 86px 에 도달하면 고정
+                    position: sticky; //
+                    top: 86px;
+                    left: 0;
+                    .gap {
+                        width: auto; 
+                        height: 100%;
+                        margin: 0 47px 0 0;
+                        //margin: 0 18px 0 0; // margin을 주는 경우에는 width를 auto로 해야함.
+                        // padding: 0 18px 0 0; // padding을 주는 경우에는 width를 100%로 받음
+                        .header {
+                            width: 100%;
+                            height: 41px;
+                            border-bottom: 1px solid #ddd;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start; // 위쪽 정렬
+                            h3 {
+                                font-size: 15px;
+                                font-weight: 500;
+                                color: #000;
+                            }
+                            span {
+                                img {
+                                    vertical-align: top;
+                                    width: 12px;
+                                    height: 12px;
+                                    transform: translateY(2px);
+                                }
+                                em {
+                                    vertical-align: top;
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: #ddd;
+                                    margin: 0 0 0 5px;
+                                }
+                            }
+                        }
+                        .sub-menu {
+                            width: 100%;
+                            height: 100vh;
+                            overflow-y: auto; // 자리가 넘치면 스크롤이 나오게 하라
+                            padding: 0 0 200px 0;
+                            // 스크롤바 제어
+                            &::-webkit-scrollbar{ // 스크롤바 너비
+                                width: 0; 
+                            }
+                            &::-webkit-scrollbar-track {
+                                background: #f0f0f0; // 스크롤 트랙 배경
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background: #5f0080; // 스크롤바 막대
+                            }
+                            > ul {
+                                width: 100%;
+                                > li {   
+                                    border-bottom: 1px solid #ddd;
+                                    width: 100%;
+                                    > a {
+                                        width: 100%;
+                                        height: 52px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        strong {
+                                            font-size: 15px;
+                                            color: #000;
+                                            font-weight: 500;
+                                        }
+                                        i {
+                                            img {
+                                                width: 18px;
+                                                height: 18px;
+                                                transform: rotate(-180deg);
+                                                transition: all 0.3s ease-in-out;
+                                            }
+                                        }
+                                        &.on {
+                                            i {
+                                                img {
+                                                    transform: rotate(0deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .sub {
+                                        width: 100%;
+                                        height: auto;
+                                        overflow: hidden;
+                                        ul {
+                                            width: 100%;
+                                            li {
+                                                width: 100%;
+                                                padding: 9px 0;
+                                                a {
+                                                    width: auto;
+                                                    display: inline-flex; // 너비는 글자크기이지만 패딩이나 마진을 마음대로 줄 수 있음
+                                                    height: 18px;
+                                                    align-items: center;
+                                                    padding: 0 0 0 20px;
+                                                    background: url(../../../../public/images/sub/icon_check_off.svg) no-repeat;
+                                                    transition: all 0.3s ease-in-out;
+                                                    color: #000;
+                                                    &:hover {
+                                                        color: #5f0080;
+                                                    }
+                                                    &.on {
+                                                        background: url(../../../../public/images/sub/icon_check_on.svg) no-repeat;
+                                                    }
+                                                    span {
+                                                        font-size: 14px;
+                                                        margin: 0 7px;
+                                                    }
+                                                    em {
+                                                        color: #ccc;
+                                                        font-size: 12px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        button {
+                                            width: 100%;
+                                            border: 0;
+                                            background: #fff;
+                                            height: 52px;
+                                            cursor: pointer;
+                                            span {
+                                                font-size: 12px;
+                                                color: #999;
+                                                font-weight: 600;
+                                            }
+                                            i {
+
+                                                img {
+                                                    width: 18px;
+                                                    height: 18px;
+                                                    transform: rotate(90deg) translateY(2px); // 회전시킨거라 왼쪽으로 움직이려면 translateY로 해야함
+                                                }
+                                            }
+                                        }
+                                        &.sub2 {
+                                            .tab {
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                button {
+                                                    width: auto;
+                                                    height: 52px;
+                                                    font-size: 14px;
+                                                    font-weight: 600;
+                                                    &.tab-btn1 {
+                                                        &.on {
+                                                            color: #5f0080;
+                                                        }
+                                                    }
+                                                    &.tab-btn2 {
+                                                        margin: 0 0 0 20px;
+                                                        &.on {
+                                                            color: #5f0080;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width: 267px * 3;
+                    background: #fff;
+                    .header {
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start; // 위쪽 정렬
+                        padding: 0 18px 0 0;
+                        h3 {
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #000;
+                        }
+                        span {
+                            a{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #999;
+                                margin: 0 0 0 15px;
+                                &.on {
+                                    color: #000;
+                                }
+                            }
+                            img {
+                                width: 14px;
+                                height: 20px;
+                            }
+                            em {
+                                margin: 0 5px 0 0;
+                            }
+                        }
+                    }
+                    .product-list {
+                        width: 100%;
+                        .filter-box {
+                            width: auto;
+                            padding: 16px 20px 18px;
+                            border: 1px solid #ddd;
+                            margin: 0 18px 31px 0;
+                            line-height: 230%;
+                            // display: flex;
+                            // flex-wrap: wrap;
+                            span {
+                                margin: 0 15px 0 0;
+                                display: inline-flex; // flex 쓰면 .filter-box에서 flex, wrap 해줘야 함
+                                em {
+                                    font-size: 14px;
+                                    color: #8d4cc4;
+                                }
+                                a{
+                                    margin: 0 0 0 1px;
+                                    img {
+                                        width: auto;
+                                        transform: translateY(-2px);
+                                    }
+                                }
+                            }
+                        }
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            flex-flow: row wrap;
+                            > .list {
+                                width: 267px; // 1068/4
+                                padding: 0 0 50px 0;
+                                .col-gap {  // 최근본 상품 클릭 대상 target
+                                    width: auto;
+                                    margin: 0 18px 0 0;
+                                    cursor: pointer;
+                                    .img-box {
+                                        width: 100%;
+                                        overflow: hidden;
+                                        a {
+                                            display: block;
+                                            width: 100%;
+                                            img {
+                                                width: 100%;
+                                                transition: all 0.3s ease-in-out;
+                                                &:hover {
+                                                    transform: scale(1.07);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .text-box {
+                                        width: 100%;
+                                        line-height: 180%;
+                                        p { // 담기
+                                            width: 100%;
+                                            margin: 1px 0;
+                                            align-items: center;
+                                            display: flex;
+                                            padding: 10px 0;
+                                            a{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border: 1px solid #ddd;
+                                                width: 100%;
+                                                height: 36px;
+                                                font-size: 14px;
+                                                border-radius: 4px;
+                                                img {
+                                                    margin: 0 3px 0 0;
+                                                    transform: translateY(1px);
+                                                }
+                                            }
+                                        }
+                                        h3 {
+                                            font-size: 16px;
+                                            color: #333;
+                                            margin-bottom: 8px;
+                                            line-height: 23px;
+                                            font-weight: 500;
+                                        }
+                                        p{
+                                            &.description {
+                                                color: #999;
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                                padding: 0;
+                                            }
+                                        }
+                                        h4 {
+                                            font-size: 14px;
+                                            color: #b5b5b5;
+                                            text-decoration: line-through;
+                                        }
+                                        h5 {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            em {
+                                                color: #fa622f;
+                                            }
+                                            strong {
+                                                color: #333;
+                                                margin-left: 10px;
+                                                font-weight: 600;
+                                                &.on {
+                                                    margin: 0;
+                                                }
+                                            }
+                                        }
+                                        h6 {
+                                            font-size: 13px;
+                                            color: #b5b5b5;
+                                            img {
+                                                width: 15px;
+                                                height: 15px;
+                                                margin-right: 2px;
+                                                transform: translateY(-1px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.sub4-content {
+                    ul {
+                        width: 100%;
+                        li {
+                            width: 100%;
+                            a {
+                                display: block;
+                                width: 100%;
+                                padding: 0 0 10px 0;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

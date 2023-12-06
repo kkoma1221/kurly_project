@@ -1,0 +1,172 @@
+// 상속 => extend
+%titleH2 {
+    font-size: 24px;
+    text-align: center;
+}
+%titleH3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+// 믹스인 => include
+@mixin inputBox ($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor) {
+    width: 100%;
+    height: 54px;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    font-size: $fontSize;
+    padding: $padding;
+    background: $bgColor;
+    color: $color;
+    font-weight: $fontW;
+    cursor: $cursor;
+}
+
+//전역변수
+$paddingTopBottom: 90px 0;
+
+#sub6 {
+    width: 100%;
+    #section1 {
+        width: 100%;
+        padding: $paddingTopBottom;
+        .container {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            .title {
+                width: 100%;
+                > h2 {
+                    @extend %titleH2;
+                    padding: 0 0 20px 0;
+                    font-weight: 600;
+                }
+                > h3 {
+                    @extend %titleH3;
+                    padding: 0 0 30px 0;
+                    font-weight: 500;
+                }
+                &.id-pw-search-title {
+                    h2 {
+                        text-align: left;
+                        padding: 0 0 10px 0;
+                        font-size: 17px;
+                    }
+                    h3 {
+                        text-align: left;
+                        color: #999;
+                        font-size: 13px;
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+                &.sub6-content {
+                    form {
+                        width: 100%;
+                        ul {
+                            width: 100%;
+                            li {
+                                width: 100%;
+                                &:nth-child(3) {
+                                    text-align: right;
+                                    padding: 0 0 20px 0;
+                                }
+                                .gap {
+                                    padding: 10px 0 0 0;
+                                    &.gap2 {
+                                        padding: 0;
+                                    }
+                                    input[type='text'], input[type='password'] { // 아이디, 비밀번호 입력
+                                        $borderColor : #ddd;
+                                        $color : #333;
+                                        $bgColor : #fff;
+                                        $fontSize: 14px;
+                                        $padding: 0 15px;
+                                        $fontW: 400;
+                                        $cursor: text;
+                                        @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor);
+                                        outline: 1px solid transparent;
+                                        outline-offset: -1px;
+                                        transition: outline 0.3s ease-in-out;
+                                        &:focus {
+                                            outline-color: #777;
+                                        }
+                                    }
+                                    span { // 아이디, 비밀번호 찾기
+                                        a {
+                                            font-size: 13px;
+                                            color: #444;
+                                        }
+                                        i {
+                                            font-size: 12px;
+                                            color: #ccc;
+                                            margin: 0 10px;
+                                        }
+                                    }
+                                    input[type='submit']{ // 로그인 버튼
+                                        $borderColor: #5f0080;
+                                        $color: #fff;
+                                        $bgColor: #5f0080;
+                                        $fontSize: 16px;
+                                        $padding:0;
+                                        $fontW: 600;
+                                        $cursor: pointer;
+                                        @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor);
+                                    }
+                                    input[type='button']{ // 회원가입 버튼
+                                        $borderColor: #5f0080;
+                                        $color: #5f0080;
+                                        $bgColor:#fff;
+                                        $fontSize: 16px;
+                                        $padding: 0;
+                                        $fontW: 600;
+                                        $cursor: pointer;
+                                        @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor);
+                                        &#signinBtn {
+                                            $borderColor: #5f0080;
+                                            $color: #fff;
+                                            $bgColor:#5f0080;
+                                            $fontSize: 16px;
+                                            $padding: 0;
+                                            $fontW: 600;
+                                            $cursor: pointer;
+                                            @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor);
+                                        }
+                                    }
+                                    .id-pw-search-text {
+                                        display: flex;
+                                        padding: 0 0 50px 0;
+                                        .left {
+                                            width: 40px;
+                                            height: 40px;
+                                            margin: 17px 17px 17px 0;
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                        .right {
+                                            padding: 17px 0 0 0;
+                                            p {
+                                                line-height: 140%;
+                                                &:first-child {
+                                                    font-size: 16px;
+                                                    color: #333;
+                                                    font-weight: 500;
+                                                }
+                                                &:last-child {
+                                                    font-size: 12px;
+                                                    color: #999;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

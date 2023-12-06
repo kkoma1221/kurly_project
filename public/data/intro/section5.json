@@ -1,0 +1,20 @@
+{ 
+    "title": "빛이 나는 프리미엄 선물 ✨",
+    "subTitle":"에스티로더부터 1++한우세트까지!",
+    "titleOption": false,
+    "animation": false,
+    "imageBanner": false,
+    "cols": 3,
+
+"timeSale": {
+    "timeSale": true,
+    "timeSaleDate": "2023-10-19 11:15:00",
+    "timeSaleHours": 48,
+    "caption1": "샛별로 받는 추석선물 일일특가",
+    "caption2": "좋은 가격에 준비하세요!",
+    "caption3": "망설이면 늦어요!"
+},
+    "product":[
+        {"번호": "INTRO_S05_001", "이미지":"0c2fb2de-2c59-41f9-97eb-2eda3c89f9a2.jpg", "제품명":"[깐깐한아저씨] 갈릭 시즈닝 굽닭 400g", "정가":11900, "할인율":0, "상품설명":"입맛을 돋우는 감칠맛", "리뷰":"33"}
+    ]
+}

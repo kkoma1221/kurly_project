@@ -1,0 +1,49 @@
+#mainModal {
+    z-index: 5;
+    position: absolute;
+    top: 235px;
+    left: 0;
+    width: 100%;
+    .wrap {
+        width: 100%;
+        .container {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            .content {
+                width: 440px;
+                height: 580px;
+                border-radius: 7px;
+                overflow: hidden;
+                box-shadow: 0 0 2px 3px rgba(0,0,0,0.05); // 수평, 수직, 사방(위아래옆옆), 뿌린효과(넓은 그림자) 
+                .img-box {
+                    width: 100%;
+                    a {
+                        display: block;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                .btn-box {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    border-top: 1px solid #fff; // 위 아래 구분하는 라인
+                    button {
+                        width: 50%;
+                        height: 100%;
+                        border: 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        background: #fff;
+                        cursor: pointer;
+                        color: #111;
+                    }
+                }
+
+            }
+        }
+    }
+}

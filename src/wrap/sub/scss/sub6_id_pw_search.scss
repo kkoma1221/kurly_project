@@ -1,0 +1,195 @@
+// 상속 => extend
+%titleH2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+// 믹스인 => include
+@mixin inputBox ($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor, $height) {
+    width: 100%;
+    height: $height;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    font-size: $fontSize;
+    padding: $padding;
+    background: $bgColor;
+    color: $color;
+    font-weight: $fontW;
+    cursor: $cursor;
+}
+
+//전역변수
+$paddingTopBottom: 90px 0;
+
+.id-pw-search {
+    width: 100%;
+    #section1 {
+        width: 100%;
+        padding: $paddingTopBottom;
+        .container {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            .title {
+                width: 100%;
+                h2 {
+                    font-size: 28px;
+                    text-align: center;
+                    padding: 0 0 30px 0;
+                    font-weight: 500;
+                }
+            }
+            .content {
+                width: 100%;
+                .tab-button-box {
+                    width: 100%;
+                    display: flex;
+                    border-bottom: 1px solid #ddd;
+                    button {
+                        width: 50%;
+                        height: 48px;
+                        border: 0;
+                        background: transparent;
+                        font-size: 16px;
+                        color: #666;
+                        font-weight: 500;
+                        cursor: pointer;
+                        border-bottom: 2px solid transparent;
+                        &.on {
+                            color: #5f0080;
+                            font-weight: 600;
+                            border-color:#5f0080;
+                        }
+                    }
+                }
+                form {
+                    width: 100%;
+                    ul {
+                        width: 100%;
+                        li {
+                            width: 100%;
+                            .gap {
+                                margin: 30px 0 0 0;
+                                position: relative;
+                                label {
+                                    display: block;
+                                    padding: 0 0 10px 0;
+                                    font-size: 14px;
+                                    color: #333;
+                                    font-weight: 600;
+                                }
+                                input[type='text']{
+                                    z-index: 1;
+                                    position: relative;
+                                    $borderColor : #ddd;
+                                    $color : #333;
+                                    $bgColor : #fff;
+                                    $fontSize: 14px;
+                                    $padding: 0 15px;
+                                    $fontW: 400;
+                                    $cursor: text;
+                                    $height: 50px;
+                                    @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor, $height);
+                                    outline: 1px solid transparent;
+                                    outline-offset: -1px;
+                                    transition: all 0.3s ease-in-out;
+                                    &:focus {
+                                        outline-color: #333;
+                                    }
+                                }
+                                input[type='submit']{ 
+                                    $borderColor: #5f0080;
+                                    $color: #fff;
+                                    $bgColor: #5f0080;
+                                    $fontSize: 16px;
+                                    $padding:0;
+                                    $fontW: 600;
+                                    $cursor: pointer;
+                                    $height: 60px;
+                                    @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor, $height);
+                                    &.off {
+                                        background: #ddd;
+                                        border: #ddd;
+                                        cursor: default;
+                                    }
+                                }
+                                input[type='button']{
+                                    $borderColor: #5f0080;
+                                    $color: #fff;
+                                    $bgColor: #5f0080;
+                                    $fontSize: 16px;
+                                    $padding:0;
+                                    $fontW: 600;
+                                    $cursor: pointer;
+                                    $height: 60px;
+                                    @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor, $height);
+                                }
+                                button {
+                                    z-index: 2;
+                                    position: absolute;
+                                    right: 10px;
+                                    bottom: 17px;
+                                    width: 16px;
+                                    height: 16px;
+                                    border: 0;
+                                    background: 0;
+                                    cursor: pointer;
+                                }
+                                &.authen-number {
+                                    position: relative;
+                                    .box {
+                                        position: relative;
+                                        width: 100%;
+                                        padding: 0 100px 0 0;
+                                        z-index: 1;
+                                        input[type='text'] {
+                                            width: 100%;
+                                        }
+                                        button {
+                                            $borderColor: #ddd;
+                                            $color: #333;
+                                            $bgColor: #fff;
+                                            $fontSize: 16px;
+                                            $padding:0;
+                                            $fontW: 600;
+                                            $cursor: pointer;
+                                            $height: 50px;
+                                            @include inputBox($borderColor, $color, $bgColor, $fontSize, $padding, $fontW, $cursor, $height);
+                                            width: 88px;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                        }
+                                    }
+                                    .time-box {
+                                        position: absolute;
+                                        right: 112px;
+                                        bottom: 1px;
+                                        height: 50px;
+                                        display: flex;
+                                        align-items: center;
+                                        z-index: 2;
+                                        em {
+                                            color: #f03f40;
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                            .guide-text {
+                                padding: 0;
+                                font-size: 0;
+                                color: #fff;
+                                &.on {
+                                    padding: 10px 0 0 0;
+                                    font-size: 13px;
+                                    color: #f03f40;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

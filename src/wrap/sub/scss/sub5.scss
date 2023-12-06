@@ -1,0 +1,405 @@
+#sub5 {
+    width: 100%;
+    #signup {
+        width: 100%;
+        .container {
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+            .title {
+                width: 100%;
+                text-align: center;
+                border-bottom: 2px solid #333;
+                .title-text {
+                    width: 100%;
+                    padding: 60px 0;
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #333;
+                }
+                .sub-title {
+                    width: 100%;
+                    padding: 0 0 10px 0;
+                    h3 {
+                        width: 100%;
+                        text-align: right;
+                        i {
+                            font-size: 12px;
+                            color: #ee6a7b;
+                        }
+                        span {
+                            font-size: 12px;
+                            color: #666;
+                        }
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+                form {
+                    width: 100%;
+                    .signup-form {
+                        width: 100%;
+                        padding: 0 0 20px 0;
+                        .list {
+                            width: 100%;
+                            padding: 10px 20px;
+                            .list-box {
+                                width: 100%; // 600 좌측레이블박스 -139  우측버튼박스 -130
+                                padding: 0 130px 0 139px;
+                                position: relative;
+                                .left-box { 
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 139px;
+                                    height: 46px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    label {
+                                        span {
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            color: #333;
+                                        }
+                                        i {
+                                            color: #ee6a7b;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                                .input-box {
+                                    width: 100%;
+                                    height: 46px;
+                                    input[type='password'],
+                                    input[type='text'] {
+                                        width: 100%;
+                                        height: 100%;
+                                        border: 1px solid #ccc;
+                                        border-radius: 3px;
+                                        color: #333;
+                                        font-size: 16px;
+                                        padding: 0 11px 1px 15px;
+                                        font-weight: 500;
+                                        outline-offset: -1px;
+                                        outline: 1px solid transparent;
+                                        transition: all 0.3s ease-in-out;
+                                        &:focus {
+                                            outline-color: #333;
+                                        }
+                                        &::placeholder {
+                                            color: #999;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                    input[type='radio'] {
+                                        appearance: none; // 라디오 체크박스 default 디자인 사용 안함. 사용자가 디자인하는 경우
+                                        width: 22px;
+                                        height: 22px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 50%;
+                                        &:checked {
+                                            border: 6px solid #5f0080;
+
+                                        }
+                                    }
+                                }
+                                .right-box {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    width: 130px;
+                                    height: 46px;
+                                    padding: 0 0 0 10px;
+                                    button {
+                                        width: 100%;
+                                        height: 100%;
+                                        color: #5f0080;
+                                        background: #fff;
+                                        border: 1px solid #5f0080;
+                                        border-radius: 3px;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        cursor: pointer;
+                                        &.hp-btn {
+                                            &.off {
+                                                color: #ddd;
+                                                border: 1px solid #ddd;
+                                                cursor: default;
+                                            }
+                                        }
+                                    }
+                                }
+                                .guide-text {
+                                    font-size: 0;
+                                    color: #f03f40;
+                                    padding: 0;
+                                    line-height: 0;
+                                    &.on {
+                                        font-size: 13px;
+                                        padding: 5px 0;
+                                        line-height: 140%;
+                                    }
+                                    &.show {
+                                        color: #666;
+                                        font-size: 12px;
+                                        line-height: 140%;
+                                    }
+                                }
+                            }
+                            //휴대폰
+                            &.hp2 {
+                                .list-box {
+                                    .input-box {
+                                        position: relative;
+                                        #userHpAuthen {
+                                            position: relative;
+                                            z-index: 1;
+                                        }
+                                        .time-box {
+                                            position: absolute;
+                                            right: 15px;
+                                            top: 14px;
+                                            z-index: 1;
+                                            // height: 44px;
+                                            // line-height: 44px;
+                                            em {
+                                                font-size: 14px;
+                                                color: #f03f40;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            // 주소
+                            &.address1 {
+                                .list-box {
+                                    .input-box {
+                                        .address-search-btn {
+                                            width: 100%;
+                                            height: 100%;
+                                            color: #5f0080;
+                                            background: #fff;
+                                            border: 1px solid #5f0080;
+                                            border-radius: 3px;
+                                            font-weight: 600;
+                                            font-size: 14px;
+                                            cursor: pointer;
+                                        }
+                                        input {}
+                                    }
+                                }
+                            }
+                            &.address3 {
+                                .list-box {
+                                    .guide-text {
+                                        font-size: 13px;
+                                        padding: 0 0 10px 0;
+                                        strong {
+                                            display: block;
+                                            color: #5f0080;
+                                            font-weight: 500;
+                                            padding: 0 0 10px 0;
+                                        }
+  
+                                    }
+                                }
+                            }
+                            &.radio { // 성별, 추가입력사항
+                                .list-box {
+                                    .input-box {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        label {
+                                            input {}
+                                            span {
+                                                font-size: 16px;
+                                                color: #333;
+                                                margin: 0 0 0 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            //생년월일
+                            &.birth {
+                                .list-box {
+                                    .input-box {
+                                        ul {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            width: 100%;
+                                            height: 100%;
+                                            border: 1px solid #ccc;
+                                            border-radius: 3px;
+                                            li {
+                                                text-align: center;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                &:nth-child(odd) {
+                                                    width: 30%;
+                                                } // 홀수
+                                                &:nth-child(even) { // 짝수
+                                                    width: 5%; 
+                                                }
+                                                input {
+                                                    text-align: center;
+                                                    border: 0;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    outline: 0;
+                                                    &:focus {
+                                                        outline: 0;
+                                                    }
+                                                }
+                                                i {color: #ccc;}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            //추가입력사항
+                            &.chooga {
+                                .list-box {
+                                    .guide-text {
+                                        color: #666;
+                                        font-size: 12px;
+                                        line-height: 140%;
+                                        padding: 10px 0;
+                                    }
+                                }
+                            }
+                            //가로줄
+                            &.hr {
+                                .list-box {
+                                    padding: 0;
+                                    hr {
+                                        border: 0; // border 모두 해제
+                                        border-bottom: 1px solid #333;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            //이용약관
+                            &.service {
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                .list-box {
+                                    padding-right: 0;
+                                    .left-box {
+                                        height: 22px;
+                                    }
+                                    .input-box {
+                                        display: flex;
+                                        align-items: center;
+                                        height: 22px;
+                                        label {
+                                            input {
+                                                appearance: none;
+                                                width: 22px;
+                                                height: 22px;
+                                                border-radius: 50%;
+                                                border: 1px solid #ccc;
+                                                background: url(../../../../public/images/sub/icon_check_off.svg) no-repeat 50% 50%;
+                                                &:checked {
+                                                    background-image: url(../../../../public/images/sub/icon_check_on.svg);
+                                                }
+                                            }
+                                            span {
+                                                margin: 0 0 0 10px;
+                                                font-size: 14px;
+                                                color: #333;
+                                            }
+                                            em {
+                                                font-size: 14px;
+                                                color: #999;
+                                                margin: 0 0 0 5px;
+                                            }
+                                        }
+                                    }
+                                    // 약관보기
+                                    .service-view {
+                                        background: #fff;
+                                        border: 0;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        span {
+                                            color: #5f0080;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                        }
+                                        img {
+                                            width: 6px;
+                                            height: 9px;
+                                            margin: 0 0 0 4px;
+                                        }
+                                    }
+                                    .guide-text {
+                                        margin: 0 0 0 32px;
+                                    }
+                                }
+                            }
+                            &.service1 {
+                                .list-box {
+                                    .left-box {
+                                        height: 30px;
+                                    }
+                                    .input-box {
+                                        height: 30px;
+                                        label {
+                                            span {
+                                                margin: 0 0 0 10px;
+                                                font-size: 18px;
+                                                font-size: 500;
+                                                color: #333;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.service5 {
+                                .list-box {
+                                    .input-box {
+                                        padding-left: 32px;
+                                        label:nth-child(2) {
+                                            margin-left: 50px;
+                                        }
+                                    }
+                                    .guide-text {
+                                        margin: 10px 0 0 64px;
+                                        padding-left: 15px;
+                                        background: url(../../../../public/images/sub/sub5/ico_sub_dot.svg) no-repeat 0 50%;
+                                        color: #5f0080;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .button-box {
+                        width: 100%;
+                        text-align: center;
+                        padding: 50px 0 100px 0;
+                        border-top: 1px solid #ddd;
+                        button {
+                            width: 220px;
+                            height: 56px;
+                            border: 1px solid #5f0080;
+                            background: #5f0080;
+                            color: #fff;
+                            font-weight: 600;
+                            font-size: 16px;
+                            border-radius: 3px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
